@@ -26,25 +26,25 @@ iwr -useb https://raw.githubusercontent.com/HazeyamaLab/system-design-docker/mas
 手順1 Docker Desktopのダウンロード・インストール
   
 https://www.docker.com/products/docker-desktop/ にアクセス，ダウンロード．
-![docker](./imgs/docker.png "terminal")
+![docker](./imgs/docker.png "terminal")  
 チェックボックスはどちらもチェックが入っていることを確認． 
-![docker-install](./imgs/check.png "terminal")
-規約に同意してインストール．
-![term](./imgs/term.png "terminal")
+![docker-install](./imgs/check.png "terminal")  
+規約に同意したらAcceptボタンでインストール．
+![term](./imgs/term.png "terminal")  
 チュートリアルをスキップすると，このようなメイン画面が出現．
-![term](./imgs/docker-main.png "terminal")
+![term](./imgs/docker-main.png "terminal")  
   
 手順2 Dockerの設定  
 WSL上でDockerが動作するように設定する．
 Docker-Desktopのメイン画面左上の矢印マークを押して設定画面を開き，右側のResourcesタブからWSL integrationを選択し，Ubuntuのチェックを入れてRefreshを押下．
-![term](./imgs/docker-config.png "terminal")
+![term](./imgs/docker-config.png "terminal")  
 
 以上でSTEP-2は完了．
 
 ### STEP-3 Ubuntu上での環境整備  
   手順1
 Ubuntuを起動し，CLIが立ち上がるのを確認する．
-![ubuntu](./imgs/ubuntu.png "terminal")
+![ubuntu](./imgs/ubuntu.png "terminal")  
   
 手順2
 Ubuntu CLIで以下のコマンドを実行．
@@ -55,18 +55,18 @@ curl -sf https://raw.githubusercontent.com/HazeyamaLab/system-design-docker/mast
   
 手順3
 VSCodeが立ち上がるので，左のテトリスのようなアイコンを選択し，Dev Containerの拡張機能を検索欄から検索してインストール．
-![ubuntu](./imgs/dev-con.png "terminal")
+![ubuntu](./imgs/dev-con.png "terminal")  
   
 手順4
 右下に以下のようなWindowが出現するので，Reopen in Containerを選択 __このとき8080，8081，3307のポートが使われていると正常に起動しない，特にローカルにMySQLがインストールされている場合は要注意__
-![ubuntu](./imgs/reopen.png "terminal")
+![ubuntu](./imgs/reopen.png "terminal")  
   
 手順5  
 初回起動時は特に時間がかかるのでしばらく待機．その後，画面下部ターミナルで以下のコマンドを実行．もしターミナルが表示されていなければ，上部メニューバーの ターミナル -> 新しいターミナル で出現する．
 ```
 ./gradlew tR
 ```
-![ubuntu](./imgs/vscode-terminal.png "terminal")
+![ubuntu](./imgs/vscode-terminal.png "terminal")  
   
 手順6  
 ```
