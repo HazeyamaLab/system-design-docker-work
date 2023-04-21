@@ -15,6 +15,14 @@
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 iwr -useb https://raw.githubusercontent.com/HazeyamaLab/system-design-docker/master/script/install.ps1 | iex
 ```
+1行目を実行すると以下のように聞かれるので，Yを入力してEnterで同意  
+```
+実行ポリシーの変更
+実行ポリシーは、信頼されていないスクリプトからの保護に役立ちます。実行ポリシーを変更すると、about_Execution_Policies
+のヘルプ トピック (https://go.microsoft.com/fwlink/?LinkID=135170)
+で説明されているセキュリティ上の危険にさらされる可能性があります。実行ポリシーを変更しますか?
+[Y] はい(Y)  [A] すべて続行(A)  [N] いいえ(N)  [L] すべて無視(L)  [S] 中断(S)  [?] ヘルプ (既定値は "N"): Y
+```
 
 手順3 Ubuntu というCLIが立ち上がり，ユーザ名とパスワードの設定が求められるので設定．このとき __パスワードは入力しても画面上に表示されないので要注意！__
 ![ubuntuの初期設定](https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F501257%2Fc10290ae-bd55-1ab1-4bbe-c885d205c45b.jpeg?ixlib=rb-4.0.0&auto=format&gif-q=60&q=75&w=1400&fit=max&s=28007229fb9c514b94e047923efacbfb "terminal")
@@ -25,19 +33,19 @@ iwr -useb https://raw.githubusercontent.com/HazeyamaLab/system-design-docker/mas
   
 手順1 Docker Desktopのダウンロード・インストール
   
-https://www.docker.com/products/docker-desktop/ にアクセス，ダウンロード．
+https://www.docker.com/products/docker-desktop/ にアクセス，ダウンロードしたexeファイルを実行．
 ![docker](./imgs/docker.png "terminal")  
-チェックボックスはどちらもチェックが入っていることを確認． 
+チェックボックスはどちらもチェックが入っていることを確認．（バージョンによってはチェックボックスが1つしかないこともあるが，それでも大丈夫） 
 ![docker-install](./imgs/check.png "terminal")  
 規約に同意したらAcceptボタンでインストール．
 ![term](./imgs/term.png "terminal")  
-チュートリアルをスキップすると，このようなメイン画面が出現．
+インストールできたらDocker-Desktopを起動し，チュートリアルをスキップすると，このようなメイン画面が出現．
 ![term](./imgs/docker-main.png "terminal")  
   
 手順2 Dockerの設定  
 WSL上でDockerが動作するように設定する．
-Docker-Desktopのメイン画面左上の矢印マークを押して設定画面を開き，右側のResourcesタブからWSL integrationを選択し，Ubuntuのチェックを入れてRefreshを押下．
-![term](./imgs/docker-config.png "terminal")  
+Docker-Desktopのメイン画面左上の矢印マークを押して設定画面を開き，右側のResourcesタブからWSL integrationを選択し，Ubuntuのチェックを入れて右下のApply & restartを押下．
+![term](./imgs/docker-ubuntu.png "terminal")  
 
 以上でSTEP-2は完了．
 
