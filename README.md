@@ -116,6 +116,11 @@ http://localhost:8080/system-design-dev にアクセスし下の画面が出現�
 ### 手順1
 Ubuntu(Win)もしくはターミナル(mac)を起動し，以下のコマンドを実行してプロジェクトフォルダに移る
 Stuinfoプロジェクトや課題プロジェクトを開く場合はsystem-design-dockerのディレクトリ名部分を適宜修正
+|  プロジェクト名  |  ディレクトリ名  |
+| ---- | ---- |
+|  動作確認  |  system-design-docker  |
+|  stuinfo  |  system-design-docker-stuinfo  |
+|  課題用テンプレート  |  system-design-docker-your-project  |
 ```sh
 cd system-design-docker
 ```
