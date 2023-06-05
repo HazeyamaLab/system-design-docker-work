@@ -12,7 +12,6 @@
         <h1 align="center"><%=sample.getContent() %></h1>
       <% }
     }else{ %> 
-      <h1 align="center">Hello SpringWork2000G0!</h1>
     <% } %>
   </body>
 </html>

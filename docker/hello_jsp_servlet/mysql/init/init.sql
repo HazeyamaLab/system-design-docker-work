@@ -11,5 +11,5 @@ CREATE TABLE `sample` (
 
 LOCK TABLES sample WRITE;
 INSERT INTO `sample` (`id`, `content`) VALUES
-(1,	'SpringWork2000G0');
+(1,	'haze-lab');
 UNLOCK TABLES;

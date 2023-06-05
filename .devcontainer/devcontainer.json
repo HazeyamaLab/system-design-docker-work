@@ -1,6 +1,6 @@
 {
   "dockerComposeFile": [
-    "../docker/local/docker-compose.yml",
+    "../docker/hello_jsp_servlet/docker-compose.yml",
     "docker-compose.yml"
   ],
   "service": "app",
