@@ -131,7 +131,11 @@ code .
 ```
 
 ### 手順3
-VScodeをdev-containerで再度開く(gif参照)
+VScodeをdev-containerで再度開く
+<br>
+VScode起動後，Ctrl + Shift + pでコマンドパレットを開き，reopen in containerと検索するとDev:Container Reopen in Containerの選択肢が出てくるので，それを選択する．
+VScodeのWindowが再起動したらOK
+(gif参照)
 ![ubuntu](./imgs/open_code.gif "code")
 
 ### 手順4
