@@ -50,7 +50,7 @@ https://www.docker.com/products/docker-desktop/ にアクセス，ダウンロ�
   
 手順2 Dockerの設定  
 WSL上でDockerが動作するように設定する．
-Docker-Desktopのメイン画面左上の矢印マークを押して設定画面を開き，右側のResourcesタブからWSL integrationを選択し，Ubuntuのチェックを入れて右下のApply & restartを押下．
+Docker-Desktopのメイン画面左上の矢印マークを押して設定画面を開き，右側のResourcesタブからWSL integrationを選択し，Ubuntuのチェックを入れて右下のApply & restartを押下すればOK．
 ![term](./imgs/docker-ubuntu.png "terminal")  
 
 以上でSTEP-2は完了．
@@ -74,7 +74,7 @@ VSCodeが立ち上がるので，左のテトリスのようなアイコンを�
 手順4
 右下に以下のようなWindowが出現するので，Reopen in Containerを選択 __このとき8080，8081，3307のポートが使われていると正常に起動しない，特にローカルにMySQLがインストールされている場合は要注意__
 ![ubuntu](./imgs/reopen.png "terminal") 
-もしこのwindowが出現しなかった場合は，以下のGifの手順をたどる
+もしこのウインドウが出現しなかった場合は，Ctrl + Shift + pでコマンドパレットを開き，"reopen in container"と検索して，Reopen in Containerを選択する．以下のGifに手順をしめす．
 ![ubuntu](./imgs/open_code.gif "code")
   
 手順5  
@@ -101,8 +101,56 @@ http://localhost:8080/system-design-dev にアクセスし下の画面が出現�
 
 <details>
 <summary> Macintoshユーザ向け環境構築方法 </summary>
+以下の手順をすべて実行してください．
 
-後で書きます
+
+### STEP-1 Docker, VScodeのインストール
+  
+手順1 Docker Desktopのダウンロード・インストール <br>
+  https://www.docker.com/products/docker-desktop/ にアクセスして，Mac版をインストールする．
+
+手順2 VScodeをダウンロード・インストール <br>
+https://azure.microsoft.com/ja-jp/products/visual-studio-code にアクセスして，インストールする．
+
+以上でSTEP-1は完了．
+
+### STEP-3 Ubuntu上での環境整備  
+手順1
+ターミナルで以下のコマンドを１行づつすべて実行．
+```
+git clone https://github.com/HazeyamaLab/system-design-docker.git
+cd system-design-docker
+code .
+```
+  
+手順2
+VSCodeが立ち上がるので，左のテトリスのようなアイコンを選択し，Dev Containerの拡張機能を検索欄から検索してインストール．
+![ubuntu](./imgs/dev-con.png "terminal")  
+  
+手順3
+右下に以下のようなウインドウが出現するので，Reopen in Containerを選択 __このとき8080，8081，3307のポートが使われていると正常に起動しない，特にローカルにMySQLがインストールされている場合は要注意__
+![ubuntu](./imgs/reopen.png "terminal") 
+もしこのウインドウが出現しなかった場合は，Ctrl + Shift + pでコマンドパレットを開き，"reopen in container"と検索して，Reopen in Containerを選択する．以下のGifに手順をしめす．
+![ubuntu](./imgs/open_code.gif "code")
+  
+手順4  
+初回起動時は特に時間がかかるのでしばらく待機．その後，右下のStarting Dev Containerのウインドウが閉じた後，画面下部ターミナルで以下のコマンドを実行．もしターミナルが表示されていなければ，上部メニューバーの ターミナル -> 新しいターミナル で出現する．
+```
+./gradlew tR
+```
+![ubuntu](./imgs/vscode-terminal.png "terminal")  
+  
+手順5  
+```
+> Task :tomcatRun
+Started Tomcat Server
+The Server is running at http://localhost:8080/system-design-dev
+```
+以上の出力を確認した後，
+http://localhost:8080/system-design-dev にアクセスし下の画面が出現すれば環境構築は終了．
+お疲れ様でした．
+![ubuntu](./imgs/hello.png "terminal")
+
 </details>
 <br>
 
@@ -111,9 +159,10 @@ http://localhost:8080/system-design-dev にアクセスし下の画面が出現�
 <details>
 <summary> VScodeでプロジェクトを開く方法 </summary>
 
-## その１(ターミナルから起動)
+## ターミナルから起動する手法
 
 ### 手順1
+Windowsの人はDocker Desktopを事前に起動しておく．
 Ubuntu(Win)もしくはターミナル(mac)を起動し，以下のコマンドを実行してプロジェクトフォルダに移る
 Stuinfoプロジェクトや課題プロジェクトを開く場合はsystem-design-dockerのディレクトリ名部分を適宜修正
 |  プロジェクト名  |  ディレクトリ名  |
@@ -131,11 +180,7 @@ code .
 ```
 
 ### 手順3
-VScodeをdev-containerで再度開く
-<br>
-VScode起動後，Ctrl + Shift + pでコマンドパレットを開き，reopen in containerと検索するとDev:Container Reopen in Containerの選択肢が出てくるので，それを選択する．
-VScodeのWindowが再起動したらOK
-(gif参照)
+VScodeをdev-containerで再度開く(gif参照)
 ![ubuntu](./imgs/open_code.gif "code")
 
 ### 手順4
@@ -146,7 +191,7 @@ VScodeのWindowが再起動したらOK
 ```
 ![ubuntu](./imgs/vscode-terminal.png "terminal")  
 
-## その2(こっちのほうが楽です)
+## VScodeから起動する手法
 
 VScodeを起動し，ファイル ->  最近使用した項目を開く<br>
 [dev container:system-design-docker]等の開きたい項目をクリックするだけ
