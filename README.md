@@ -110,7 +110,7 @@ http://localhost:8080/system-design-dev にアクセスし下の画面が出現�
   https://www.docker.com/products/docker-desktop/ にアクセスして，Mac版をインストールする．
 
 手順2 VScodeをダウンロード・インストール <br>
-https://azure.microsoft.com/ja-jp/products/visual-studio-code にアクセスして，インストールする．
+https://code.visualstudio.com/download にアクセスして，インストールする．
 
 以上でSTEP-1は完了．
 
