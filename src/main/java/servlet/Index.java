@@ -21,11 +21,18 @@ public class Index extends HttpServlet {
   private static final long serialVersionUID = 1L;
 
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    // requestオブジェクトの文字エンコーディングの設定
     request.setCharacterEncoding("UTF-8");
-    SampleService sampleService = new SampleService();
-    List<Sample> sampleList = sampleService.getSample();
-    request.setAttribute("sampleList", sampleList);
-    RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/sample/index.jsp");
+    // request.setAttribute("",);
+    RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
     dispatcher.forward(request, response);
+  }
+  public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    // requestオブジェクトの文字エンコーディングの設定
+        request.setCharacterEncoding("UTF-8");
+        // requestオブジェクトから登録情報の取り出し
+        String hello = request.getParameter("hello");
+        System.out.println("取得した文字列は" + hello + "です！");
+        response.sendRedirect("/system-design-dev/index");
   }
 }

@@ -1,12 +1,12 @@
-<%@ page import="model.Sample" %> 
-<%@ page import="java.util.ArrayList"%> 
-<%@ page import = "java.util.List" %> 
-<% List<Sample> sampleList = (ArrayList<Sample>)request.getAttribute("sampleList"); %> 
-<%@ page import="java.time.format.DateTimeFormatter" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
-<html>
-  <body>
-    <h1 align="center">Hello System-Design!</h1>
-  </body>
-</html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" %>
+<!--------------------------------
+  index.jsp
+---------------------------------->
+<HTML>
+  <BODY>
+    <FORM action="/system-design-dev/index" method="post">
+      <INPUT type="text" name="hello" />
+      <INPUT type="submit" name="OK" />
+    </FORM>
+  </BODY>
+</HTML>
