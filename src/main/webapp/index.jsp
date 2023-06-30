@@ -4,9 +4,6 @@
 ---------------------------------->
 <HTML>
   <BODY>
-    <FORM action="/system-design-dev/index" method="post">
-      <INPUT type="text" name="hello" />
-      <INPUT type="submit" name="OK" />
-    </FORM>
+    <h1>Hello Template!</h1>
   </BODY>
 </HTML>

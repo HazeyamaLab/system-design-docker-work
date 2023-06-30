@@ -9,30 +9,23 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.List;
-
-import model.Sample;
-import service.SampleService;
-
+// @WebServletの引数は，どのURLでこのServletが起動するかを示している．
 @WebServlet("/index")
 // HttpServletを継承することで、このクラスはServletとして、働くことができる
 public class Index extends HttpServlet {
 
   private static final long serialVersionUID = 1L;
-
+  //doGetはブラウザからのGETリクエストがあった場合に実行される．
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     // requestオブジェクトの文字エンコーディングの設定
     request.setCharacterEncoding("UTF-8");
-    // request.setAttribute("",);
+    // RequestDispatcherで遷移先の情報を定義している．
     RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
     dispatcher.forward(request, response);
   }
+  //doPostはブラウザからのPOSTリクエストがあった場合に実行される．
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     // requestオブジェクトの文字エンコーディングの設定
-        request.setCharacterEncoding("UTF-8");
-        // requestオブジェクトから登録情報の取り出し
-        String hello = request.getParameter("hello");
-        System.out.println("取得した文字列は" + hello + "です！");
-        response.sendRedirect("/system-design-dev/index");
+    request.setCharacterEncoding("UTF-8");
   }
 }
