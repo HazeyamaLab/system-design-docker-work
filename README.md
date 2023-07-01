@@ -2,8 +2,7 @@
 
 授業『システム設計』 最終課題用テンプレートのレポジトリ
 
-# VScodeの操作
-## 基礎的なVScodeの操作方法
+# 課題の進め方
 <details>
 <summary> VScodeでプロジェクトを開く方法 </summary>
 
@@ -17,7 +16,7 @@ git clone https://github.com/HazeyamaLab/system-design-docker-work.git
 
 ### 手順1
 Docker Desktopを事前に起動したうえで，
-Ubuntu(Win)もしくはターミナル(mac)を起動し，以下のコマンドを実行してプロジェクトフォルダに移るや課題プロジェクトを開く場合はsystem-design-docker-workを開く．
+Ubuntu(Win)もしくはターミナル(mac)を起動し，以下のコマンドを実行し課題プロジェクトを開く．
 |  プロジェクト名  |  ディレクトリ名  |
 | ---- | ---- |
 |  動作確認  |  system-design-docker  |
@@ -36,9 +35,12 @@ code .
 VScodeをdev-containerで再度開く．右下のウインドウからReopen in containerを選択するか，Ctrl + Shift + pでコマンドパレットを開き，Reopen in Container を入力して選択する(gif参照)
 ![ubuntu](./imgs/open_code.gif "code")
 
-### 手順4
+### 手順４
+アプリケーションのソースコードを記入する．アプリケーションのソースコードは src/main/ 配下に記入する．
+
+### 手順５
 手順5  
-画面下部ターミナルで以下のコマンドを実行．もしターミナルが表示されていなければ，上部メニューバーの ターミナル -> 新しいターミナル で出現する．暫く待つと，ブラウザで http://localhost:8080/system-design-dev/ を開くとアプリケーションが操作できる．
+画面下部ターミナルで以下のコマンドを実行．もしターミナルが表示されていなければ，上部メニューバーの ターミナル -> 新しいターミナル で出現する．暫く待ったあと，ブラウザで http://localhost:8080/system-design-dev/ を開くとアプリケーションが操作できる．
 ```
 ./gradlew tR
 ```
@@ -47,7 +49,7 @@ VScodeをdev-containerで再度開く．右下のウインドウからReopen in 
 ## VScodeから起動する手法
 
 VScodeを起動し，ファイル ->  最近使用した項目を開く<br>
-[dev container:system-design-docker]等の開きたい項目をクリックするだけ
+[dev container:system-design-docker-work]等の開きたい項目をクリックするだけ
 ![ubuntu](./imgs/open_code_2.gif "code")
 
 </details>
@@ -88,6 +90,8 @@ Enter password:と表示されてパスワード入力が求められるので�
 ```
 use db;
 ```
-
-
 </details>
+<br>
+
+# 質問やバグ報告等
+開発上で困ったことがあったらm228112p [@] st.u-gakugei.ac.jpまでTeams等で連絡してください．
