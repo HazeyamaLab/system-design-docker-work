@@ -1,4 +1,4 @@
-package service;
+package control;
 
 import dao.SampleDao;
 import model.Sample;
@@ -6,7 +6,7 @@ import model.Sample;
 import java.sql.Connection;
 import java.util.List;
 
-public class SampleService {
+public class SampleManager {
 
     private Connection connection = null;
 
