@@ -36,7 +36,7 @@ VScodeをdev-containerで再度開く．右下のウインドウからReopen in 
 ![ubuntu](./imgs/open_code.gif "code")
 
 ### 手順４
-アプリケーションのソースコードを記入する．アプリケーションのソースコードは src/main/ 配下に記入する．
+アプリケーションのソースコードを記入する．アプリケーションのソースコードは src/main/ 配下に記入する．新しいjavaファイルを作成する場合は，作成したいパッケージ(control, dao, model, servlet)のフォルダをクリックし，New fileを押して拡張子.javaでファイルを作成する．
 
 ### 手順５
 手順5  
@@ -95,3 +95,16 @@ use db;
 
 # 質問やバグ報告等
 開発上で困ったことがあったらm228112p [@] st.u-gakugei.ac.jpまでTeams等で連絡してください．
+
+<br>
+
+
+# よくある質問
+<details>
+<summary> 今までの質問と回答 </summary>
+
+### StuinfoとWorkを同時に開きたい
+今回の環境は異なるプロジェクトを同時に起動することはできないので，workのプロジェクトを起動したまま，stuinfoなどのプロジェクトのソースコードを見たい場合には，stuinfoのプロジェクトを開くときに，dev-containerで開かないようにする．そうするとアプリは起動しないが，ソースコードは閲覧できる．
+
+
+</details>
