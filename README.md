@@ -93,6 +93,22 @@ use db;
 </details>
 <br>
 
+# 最終課題の提出方法
+<details>
+<summary> 提出方法の詳細(Win版) </summary>
+
+## 手順1
+workをVScodeを開き， __dev-containerを起動しない状態__ にする．
+
+## 手順2 
+左のサイドメニューのエクスプローラーを選択し，srcフォルダにカーソルを合わせて右クリックし，Explorerで表示を押す．
+![ubuntu](./imgs/src.png "code")
+## 手順3
+エクスプローラーが立ち上がるので，srcフォルダを選択して右クリックし，zipファイルに圧縮する を選択．
+圧縮されたsrc.zipが出現するので，これをwebclassで提出する．
+![ubuntu](./imgs/zip.png "code")
+</details>
+
 # 質問やバグ報告等
 開発上で困ったことがあったらm228112p [@] st.u-gakugei.ac.jpまでTeams等で連絡してください．
 
