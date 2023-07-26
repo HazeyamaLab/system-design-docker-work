@@ -109,6 +109,21 @@ workをVScodeを開き， __dev-containerを起動しない状態__ にする．
 ![ubuntu](./imgs/zip.png "code")
 </details>
 
+<details>
+<summary> 提出方法の詳細(Mac版) </summary>
+
+## 手順1
+workをVScodeを開き， __dev-containerを起動しない状態__ にする．
+
+## 手順2 
+左のサイドメニューのエクスプローラーを選択し，srcフォルダにカーソルを合わせて右クリックし，Finderで表示します を押す．
+![ubuntu](./imgs/finder.png "code")
+## 手順3
+Finderが立ち上がるので，srcフォルダを選択して右クリックし，"src"を圧縮 を選択．
+圧縮されたsrc.zipが出現するので，これをwebclassで提出する．
+![ubuntu](./imgs/zip2.png "code")
+</details>
+
 # 質問やバグ報告等
 開発上で困ったことがあったらm228112p [@] st.u-gakugei.ac.jpまでTeams等で連絡してください．
 
